@@ -1,0 +1,127 @@
+.myclass {
+    font-weight : 500px;
+    font-size: 4rem;
+    color: white;
+}
+.navclass{
+    background-color: black;
+    height: 60px;
+    color: white;
+}
+
+img{
+    padding-right: 2%;
+    background-color: white;
+    height: 30px;
+}
+
+svg{
+    height : 30px;
+    fill: #fff;
+}
+.navclass a{
+    color: white;
+   
+}
+
+
+.badge {
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+
+  #lblCartCount {
+      font-size: 15px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -15px; 
+      margin-bottom: 30px;
+      margin-top: 0%;
+      margin-top : -10px;
+      border-radius: 50%;
+  }
+
+  .myicon{
+      padding-left: 2%;
+      padding-right: 5%;
+      cursor : pointer;
+  }
+
+
+
+.dropmenuclass{
+    position: relative;
+}
+
+.card{
+    position: absolute;
+    background-color: black;
+    margin-left: -70%;
+    display: none;
+    margin-top: 50%;
+    z-index: -1000px;
+}
+
+
+.dropmenuclass1{
+    position: relative;
+}
+
+.card1{
+    position: absolute;
+    background-color: black;
+    margin-left: -70%;
+    display: none;
+    margin-top: 26%;
+    z-index: -1000px;
+    border-radius: 1%;
+    
+}
+
+.list-group {
+    background-color: black;
+}
+.list-group-item{
+    color : black;
+ 
+}
+.menubuttin{
+    display: none;
+}
+ 
+@media screen and (max-width : 992px){
+    .headnav{
+        display: none;
+    }
+    .menubuttin{
+        display: block;
+    }
+  }
+
+  .homed{
+      width: 100%;
+      height: 200px;
+      background-color: brown;
+      color : green;
+  }
+
+  .sidebar-nav{
+      display: none;
+      position: absolute;
+      background-color: green;
+      height: 100vh;
+      margin-top :-46px;
+      margin-left: -20px;
+      width: 65%;
+      
+  }
+
+  .opencl{
+      display: block;
+  }

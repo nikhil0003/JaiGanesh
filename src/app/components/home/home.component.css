@@ -1,0 +1,15 @@
+.p{
+     margin-top: 60px;
+     
+}
+
+
+.bannerc img{
+     height: 350px;
+}
+
+@media screen and (max-width : 992px){
+    .bannerc img{
+          height: 300px;
+     }
+   }
