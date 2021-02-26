@@ -1,20 +1,25 @@
-
+<div class="nav-overlay" (click)="closeoutNav()"></div>
     <div class="d-flex p-2 fixed-top navclass">
         <div class=" mr-auto">
             <div class="d-flex flex-row  mb-3">
               <div class="menubuttin">
                 <div href="#" style="margin-left: 0rem;margin-right :0em; margin-top: -2px">
-                  <button class="btn btn-link mymenubutton"
-                   style="background-color: transparent; color: white;"
-                   data-toggle="offcanvas"> 
-                    <i class="fas fa-bars"></i></button>
+                  <button class="btn btn-link mymenubutton" (click)="openNav()"> 
+                    <i class="fas fa-bars"></i>
+                  </button>
                   </div>
                   <div class="sidebar-nav">
-                    <nav class="navbar " style="background-color: black; height: 60px;">
+                    <!-- <nav class="navbar " style="background-color: black; height: 60px;">
                         <div class="container-fluid">
                           <a class="navbar-brand" href="#">Navbar</a>
                         </div>
-                      </nav>
+                      </nav> -->
+                      <a  class="closebtn" (click)="closeNav()">&times;</a>
+                             <a href="#">Women</a>
+                              <a href="#">Men</a>
+                               <a href="#">Kids</a>
+                               <a href="#">Select</a>
+                               <a href="#">Collection</a>
                    
                   </div>
               </div>
