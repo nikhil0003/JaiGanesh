@@ -7,12 +7,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FootbarComponent } from './components/footbar/footbar.component';
+import { ProductviewComponent } from './components/productview/productview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FootbarComponent,
+    ProductviewComponent
   ],
   imports: [
     BrowserModule,
