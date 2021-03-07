@@ -12,8 +12,5 @@ export class AppComponent implements OnInit  {
   }
 
             
-  //   $('.menu').on('click',function(){
-  //     $('.submenu').addClass('close');
-  // });
   
 }
