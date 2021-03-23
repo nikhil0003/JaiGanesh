@@ -10,10 +10,6 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { 
-  //   $('.mymenubutton').on('click',function(){
-  //     $('.sidebar-nav').addClass('opencl');
-  //  });
-   
     $('.dropmenuclass').hover(function(){
        $('.card').stop().slideToggle(200);
 
