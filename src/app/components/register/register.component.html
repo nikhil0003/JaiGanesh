@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="regis">
+    <form [formGroup]="regForm">
+    <div class="container">
+        <div class="row">
+             <h1 style="color: white;"><i class="fa fa-lock" aria-hidden="true" style="color: white;"></i> Register</h1>
+        
+            </div><br /><br />
+            
+                        <div class="input-group">
+                            
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                    </div>
+                                    
+                                    <input type="text" name="username" formControlName="username" class="form-control" placeholder="username or email"/>
+                                </div>
+                                <div *ngIf="(isSubmitted && loginControls.username.errors)" class="errorclass">*Please Enter Valid Email</div> 
+                                <br />
+                        <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key icon"></i></span>
+                                    </div>
+                                        <input type="Password"  name="password" formControlName="password" class="form-control" placeholder="password"/>
+                                </div>
+                                 <div *ngIf="(isSubmitted && loginControls.password.errors)"  class="errorclass">*Please Enter Password</div> 
+                                <br />
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key icon"></i></span>
+                                    </div>
+                                        <input type="Password"  name="confirmpassword" formControlName="confirmpassword" class="form-control" placeholder="confirm password"/>
+                                </div>
+                                 <div *ngIf="(isSubmitted && loginControls.confirmpassword.errors)"  class="errorclass">*Please Enter Confirm  Password Again</div> 
+                                <br /><br />
+            <button style="width: 250px;" type="submit" class="btn btn-info"  (click)= "registerc(regForm)">Register </button><br />
+                   <br /> <div style="border:1px solid black;height:1px;width:350px;"></div><br />
+     
+        </div>
+    </form>
+</div>

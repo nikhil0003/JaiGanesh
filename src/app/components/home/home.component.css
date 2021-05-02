@@ -24,11 +24,31 @@
     padding: 0%;
   }
   
-
+  .hero1{
+  background: url("http://localhost:4200/assets/images/slide-01.jpg");
+  background-size: 1500px  ;
+      background-repeat: no-repeat;
+  }
+ .hero2{
+  background: url("http://localhost:4200/assets/images/slide-02.jpg");
+  background-size: 1500px  ;
+    background-repeat: no-repeat;
+  }
 @media screen and (max-width : 992px){
     .bannerc img{
-          height: 300px;
+          height: 400px;
      }
+     .hero1{
+      background: url("http://localhost:4200/assets/images/slide-01.jpg");
+      background-size: 992px 500px  ;
+          background-repeat: no-repeat;
+      }
+     .hero2{
+      background: url("http://localhost:4200/assets/images/slide-02.jpg");
+      background-size: 992px 500px ;
+        background-repeat: no-repeat;
+      }
+     
    }
 
    .myclass{
@@ -42,6 +62,16 @@
      .p{
           margin-top: 0px;
      }
+     .hero1{
+      background: url("http://localhost:4200/assets/images/slide-01.jpg");
+      background-size: 450px 500px  ;
+          background-repeat: no-repeat;
+      }
+     .hero2{
+      background: url("http://localhost:4200/assets/images/slide-02.jpg");
+      background-size: 450px 500px ;
+        background-repeat: no-repeat;
+      }
    }
 
 /*

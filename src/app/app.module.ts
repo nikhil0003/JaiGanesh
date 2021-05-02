@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FootbarComponent } from './components/footbar/footbar.component';
 import { ProductviewComponent } from './components/productview/productview.component';
 import { ProductsComponent } from './components/products/products.component';
+import { MyaccountComponent } from './components/myaccount/myaccount.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,17 @@ import { ProductsComponent } from './components/products/products.component';
     HomeComponent,
     FootbarComponent,
     ProductviewComponent,
-    ProductsComponent
+    ProductsComponent,
+    MyaccountComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
