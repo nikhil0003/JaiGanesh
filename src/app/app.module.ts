@@ -13,6 +13,12 @@ import { ProductsComponent } from './components/products/products.component';
 import { MyaccountComponent } from './components/myaccount/myaccount.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
+import {LoginService} from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Productview2Component } from './productview2/productview2.component';
+import { ShopcartComponent } from './components/shopcart/shopcart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderstatusComponent } from './components/orderstatus/orderstatus.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,11 @@ import { RegisterComponent } from './components/register/register.component';
     ProductviewComponent,
     ProductsComponent,
     MyaccountComponent,
-    RegisterComponent
+    RegisterComponent,
+    Productview2Component,
+    ShopcartComponent,
+    CheckoutComponent,
+    OrderstatusComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +41,10 @@ import { RegisterComponent } from './components/register/register.component';
     CarouselModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

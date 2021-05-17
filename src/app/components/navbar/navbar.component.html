@@ -1,3 +1,5 @@
+
+
 <div class="nav-overlay" (click)="closeoutNav()"></div>
     <div class="d-flex p-2 fixed-top navclass">
         <div class=" mr-auto">
@@ -9,18 +11,12 @@
                   </button>
                   </div>
                   <div class="sidebar-nav">
-                    <!-- <nav class="navbar " style="background-color: black; height: 60px;">
-                        <div class="container-fluid">
-                          <a class="navbar-brand" href="#">Navbar</a>
-                        </div>
-                      </nav> -->
                       <a  class="closebtn" (click)="closeNav()">&times;</a>
                              <a href="#">Women</a>
                               <a href="#">Men</a>
                                <a href="#">Kids</a>
                                <a href="#">Select</a>
                                <a href="#">Collection</a>
-                   
                   </div>
               </div>
                 <div class="p-2">
@@ -75,11 +71,17 @@
                 
               </div>  
             </div>
-        <div class="ml-auto  p-2">
+        <div class="ml-auto  p-1">
             <div class="d-flex flex-row px-1">
                 <i class="far fa-heart px-2 myicon" style="font-size:20px"></i>
-                <i class="far fa-user px-2 myicon" style="font-size:20px" routerLink="/account" ></i>
-                 <i class="fa myicon" style="font-size:20px">&#xf07a;</i> 
-                <span class='badge badge-warning' id='lblCartCount'> 5 </span></div>   
+                <i *ngIf="!islogined" class="far fa-user px-2 myicon" style="font-size:20px" routerLink="/account" ></i>
+                 <div>
+               <i class="fa myicon" style="font-size:20px">&#xf07a;</i> 
+                <span class='badge badge-warning' id='lblCartCount'> {{ cartNumber }} </span>
+              </div>
+              <i *ngIf="islogined" class="fa fa-power-off px-2 myicon" style="font-size:20px;" (click) ="logout()" ></i>
+              </div>
+              
+  
       </div>
       </div>

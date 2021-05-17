@@ -1,347 +1,199 @@
-<div class="container">
-  <div class="productwhole">
-    <!-- HERO SECTION-->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
-          <div class="col-lg-6">
-            <h1 class="h2 text-uppercase mb-0">Shop</h1>
-          </div>
-          <div class="col-lg-6 text-lg-right">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Shop</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
+<app-navbar></app-navbar>
+<div class="filterview" [ngStyle] ="checking()">
+   <div class="row">
+      <div class="col-3">
+         <svg aria-hidden="true" focusable="false" role="presentation" id="clearfixid" (click)="closeFilterview()"
+            viewBox="0 0 24 24">
+            <path d="M19.583 4.965a.65.65 0 0 1-.176.449l-6.445 6.426 6.445 
+               6.426c.117.131.176.28.176.449a.65.65 0 0 1-.176.449.846.846 0 0 1-.215.127.596.596 0 0 
+               1-.468 0 .846.846 0 0 1-.215-.127l-6.426-6.445-6.426 6.445a.846.846 0 0 1-.215.127.596.596
+               0 0 1-.468 0 .846.846 0 0 1-.215-.127.65.65 0 0 1-.176-.449c0-.169.059-.318.176-.449l6.445-6.426-6.445-6.426a.65.65 
+               0 0 1-.176-.449c0-.169.059-.318.176-.449a.652.652 0 0 1 .449-.176c.169 0 .319.059.449.176l6.426 6.445 6.426-6.445a.652.652 
+               0 0 1 .449-.176c.169 0 .319.059.449.176.117.13.176.28.176.449z"></path>
+         </svg>
       </div>
-    </section>
-    <section class="py-5">
-      <div class="container p-0">
-        <div class="row">
-          <!-- SHOP SIDEBAR-->
-          <div class="col-lg-3 order-2 order-lg-1">
-            <h5 class="text-uppercase mb-4">Categories</h5>
-            <div class="py-2 px-4   mb-3"><strong class="small text-uppercase font-weight-bold">Fashion &amp; Acc</strong></div>
-            <ul class="list-unstyled small text-muted pl-lg-4 font-weight-normal">
-              <li class="mb-2"><a class="reset-anchor" href="#">Women's T-Shirts</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Men's T-Shirts</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Dresses</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Novelty socks</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Women's sunglasses</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Men's sunglasses</a></li>
-            </ul>
-            <div class="py-2 px-4 bg-light mb-3"><strong class="small text-uppercase font-weight-bold">Health &amp; Beauty</strong></div>
-            <ul class="list-unstyled small text-muted pl-lg-4 font-weight-normal">
-              <li class="mb-2"><a class="reset-anchor" href="#">Shavers</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">bags</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Cosmetic</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Nail Art</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Skin Masks &amp; Peels</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Korean cosmetics</a></li>
-            </ul>
-            <div class="py-2 px-4 bg-light mb-3"><strong class="small text-uppercase font-weight-bold">Electronics</strong></div>
-            <ul class="list-unstyled small text-muted pl-lg-4 font-weight-normal mb-5">
-              <li class="mb-2"><a class="reset-anchor" href="#">Electronics</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">USB Flash drives</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Headphones</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Portable speakers</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Cell Phone bluetooth headsets</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#">Keyboards</a></li>
-            </ul>
-            <h6 class="text-uppercase mb-4">Price range</h6>
-            <div class="price-range pt-4 mb-5">
-              <div id="range"></div>
-              <div class="row pt-2">
-                <div class="col-6"><strong class="small font-weight-bold text-uppercase">From</strong></div>
-                <div class="col-6 text-right"><strong class="small font-weight-bold text-uppercase">To</strong></div>
-              </div>
-            </div>
-            <h6 class="text-uppercase mb-3">Show only</h6>
-            <div class="custom-control custom-checkbox mb-1">
-              <input class="custom-control-input" id="customCheck1" type="checkbox">
-              <label class="custom-control-label text-small" for="customCheck1">Returns Accepted</label>
-            </div>
-            <div class="custom-control custom-checkbox mb-1">
-              <input class="custom-control-input" id="customCheck2" type="checkbox">
-              <label class="custom-control-label text-small" for="customCheck2">Returns Accepted</label>
-            </div>
-            <div class="custom-control custom-checkbox mb-1">
-              <input class="custom-control-input" id="customCheck3" type="checkbox">
-              <label class="custom-control-label text-small" for="customCheck3">Completed Items</label>
-            </div>
-            <div class="custom-control custom-checkbox mb-1">
-              <input class="custom-control-input" id="customCheck4" type="checkbox">
-              <label class="custom-control-label text-small" for="customCheck4">Sold Items</label>
-            </div>
-            <div class="custom-control custom-checkbox mb-1">
-              <input class="custom-control-input" id="customCheck5" type="checkbox">
-              <label class="custom-control-label text-small" for="customCheck5">Deals &amp; Savings</label>
-            </div>
-            <div class="custom-control custom-checkbox mb-4">
-              <input class="custom-control-input" id="customCheck6" type="checkbox">
-              <label class="custom-control-label text-small" for="customCheck6">Authorized Seller</label>
-            </div>
-            <h6 class="text-uppercase mb-3">Buying format</h6>
-            <div class="custom-control custom-radio">
-              <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio">
-              <label class="custom-control-label text-small" for="customRadio1">All Listings</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
-              <label class="custom-control-label text-small" for="customRadio2">Best Offer</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input class="custom-control-input" id="customRadio3" type="radio" name="customRadio">
-              <label class="custom-control-label text-small" for="customRadio3">Auction</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input class="custom-control-input" id="customRadio4" type="radio" name="customRadio">
-              <label class="custom-control-label text-small" for="customRadio4">Buy It Now</label>
-            </div>
-          </div>
-          <!-- SHOP LISTING-->
-          <div class="col-lg-9 order-1 order-lg-2 mb-5 mb-lg-0">
-            <div class="row mb-3 align-items-center">
-              <div class="col-lg-6 mb-2 mb-lg-0">
-                <p class="text-small text-muted mb-0">Showing 1–12 of 53 results</p>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-inline d-flex align-items-center justify-content-lg-end mb-0">
-                  <li class="list-inline-item text-muted mr-3"><a class="reset-anchor p-0" href="#"><i class="fas fa-th-large"></i></a></li>
-                  <li class="list-inline-item text-muted mr-3"><a class="reset-anchor p-0" href="#"><i class="fas fa-th"></i></a></li>
-                  <li class="list-inline-item">
-                    <select class="selectpicker ml-auto" name="sorting" data-width="200" data-style="bs-select-form-control" data-title="Default sorting">
-                      <option value="default">Default sorting</option>
-                      <option value="popularity">Popularity</option>
-                      <option value="low-high">Price: Low to High</option>
-                      <option value="high-low">Price: High to Low</option>
-                    </select>
+      <div class="col-9">
+         <div class="d-flex justify-content-start " style="margin: 0%;align-self:center">
+            <h3>FILTER</h3>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+     <div class="col-3"></div>
+     <div class="col-9">
+       <h6>
+      COLOR
+     </h6>
+    </div>
+   </div>
+   <div class="row">
+     <div class="container colorcontainer">
+      <i class="fa fa-circle" style="color: red;"> <span style="height: 10px;color: Black;">
+        Red
+      </span>
+        </i>
+        <br>
+        <i class="fa fa-circle" style="color: green;"> <span style="height: 10px;color: Black;">
+          green
+        </span>
+          </i>
+          <br>
+          <i class="fa fa-circle" style="color: black;"> <span style="height: 10px;color: Black;">
+            black
+          </span>
+            </i>        <br>
+
+            <i class="fa fa-circle" style="color: yellow;"> <span style="height: 10px;color: Black;">
+              yellow
+            </span>
+              </i>        <br>
+
+              <i class="fa fa-circle" style="color: grey;"> <span style="height: 10px; color: Black;">
+                grey
+              </span>
+                </i>
+
+     </div>
+   </div>
+
+   <div class="row">
+      <div class="col-3"></div>
+      <div class="col-9">
+        <h6>
+       SIZE
+      </h6>
+     </div>
+    </div>
+    <div class="row">
+      <div class="container colorcontainer">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+         <label class="form-check-label" for="flexCheckChecked">
+            S
+         </label>
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+         <label class="form-check-label" for="flexCheckChecked">
+            M
+         </label>
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+         <label class="form-check-label" for="flexCheckChecked">
+            L
+         </label>
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+         <label class="form-check-label" for="flexCheckChecked">
+            XL
+         </label>
+         
+ 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-9">
+        <h6>
+       PRICE
+      </h6>
+     </div>
+    </div>
+    <div class="row">
+      <div class="container colorcontainer">
+         
+         
+ 
+         
+      </div>
+    </div>
+
+
+</div>
+<!--
+  ==================================================================
+  main
+  ==================================================================
+ -->
+<div class="container main">
+   <div class="row filterbar">
+      <div class="col-4">
+         <div class="ref mr-auto">
+            <div class="d-flex justify-content-start">
+               <ul>
+                  <li class="align-self-center">
+                     <a>
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-theme-084" (click)="openFilterview()"viewBox="0 0 24 24">
+                           <path d="M19.292 1.871c.169 0 .315.063.439.186a.601.601 0 0 1 .186.439v2.5a.657.657 0 0 1-.039.225.499.499 0 0 1-.117.186l-5.469 6.074v6.641a.582.582 0 0 1-.078.293.823.823 0 
+                              0 1-.195.234l-3.75 2.5c-.052.026-.107.049-.166.068a.603.603 0
+                              0 1-.479-.05c-.104-.052-.186-.127-.244-.225s-.088-.205-.088-.322v-9.14L3.823 5.406a.491.491 0 0
+                              1-.117-.186.648.648 0 0 1-.039-.224v-2.5a.6.6 0 0 1 .186-.439.604.604 0 0 1 .439-.186h15zm-.625
+                              2.89v-1.64H4.917v1.641l5.469 6.074a.507.507 0 0 1 .117.186.653.653 0 0 1 
+                              .039.225v8.203l2.5-1.66v-6.543c0-.078.013-.152.039-.225a.515.515 0 0 1 .117-.186l5.469-6.075z"></path>
+                        </svg>
+                     </a>
                   </li>
-                </ul>
-              </div>
+                  <li class="align-self-center">
+                     REFINE BY
+                  </li>
+               </ul>
             </div>
-            <div class="row">
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-1.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Kui Ye Chen’s AirPods</a></h6>
-                  <p class="small text-muted">$250</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-2.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Air Jordan 12 gym red</a></h6>
-                  <p class="small text-muted">$300</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-primary">New</div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-3.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Cyan cotton t-shirt</a></h6>
-                  <p class="small text-muted">$25</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-4.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Timex Unisex Originals</a></h6>
-                  <p class="small text-muted">$351</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-info">Sale</div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-5.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Red digital smartwatch</a></h6>
-                  <p class="small text-muted">$250</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-6.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Nike air max 95</a></h6>
-                  <p class="small text-muted">$300</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-7.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Joemalone Women prefume</a></h6>
-                  <p class="small text-muted">$25</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-8.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Apple Watch</a></h6>
-                  <p class="small text-muted">$351</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-danger">Sold</div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-9.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Men silver Byron Watch</a></h6>
-                  <p class="small text-muted">$351</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-primary">New</div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-10.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Ploaroid one step camera</a></h6>
-                  <p class="small text-muted">$351</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-11.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Gray Nike running shoes</a></h6>
-                  <p class="small text-muted">$351</p>
-                </div>
-              </div>
-              <!-- PRODUCT-->
-              <div class="col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="mb-3 position-relative">
-                    <div class="badge text-white badge-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="assets\images\product-12.jpg" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                        <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="detail.html">Black DSLR lense</a></h6>
-                  <p class="small text-muted">$351</p>
-                </div>
-              </div>
-            </div>
-            <!-- PAGINATION-->
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center justify-content-lg-end">
-                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+         </div>
       </div>
-    </section>
-  </div>
-  </div>
+      <div class="col-3"></div>
+      <div class="col-5 ml-auto">
+         <div class="d-flex justify-content-end">
+            <label for="SortBy" class="mb-0">SORT BY:  </label>
+            <select name="sort_by" class="p-0 pr-10 pr-lg-25 mb-0 border-0 cursor-pointer" id="SortBy">
+               <option value="manual">Featured</option>
+               <option value="best-selling">Best Selling</option>
+               <option value="price-ascending"> Price Ascending</option>
+               <option value="price-descending">Price Descending</option>
+               <option value="created-ascending">Date Ascending</option>
+               <option value="created-descending" selected="">Date Descending</option>
+               <option value="title-ascending">Name Ascending</option>
+               <option value="title-descending">Name Descending</option>
+            </select>
+            <label for="ViewLength" class="mb-0 mr-1">ITEMS PER PAGE:</label>
+            <select name="view_length"  id="ViewLength">
+               <option value="6">6</option>
+               <option value="12" selected="">12</option>
+               <option value="18">18</option>
+               <option value="24">24</option>
+               <option value="48">48</option>
+            </select>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div *ngFor="let trendproduct of trendproductList"class="col-lg-3 col-md-4 col-sm-6">
+            <div class="product-grid7">
+               <div class="product-image7">
+                  <a href="#">
+                  <img class="pic-1" src="{{ trendproduct.productImg1 }}">
+                  <img class="pic-2" src="{{ trendproduct.productImg2 }}">
+                  </a>
+                  <ul class="social">
+                     <li><a  class="fa fa-search"></a></li>
+                     <li><a href="" class="far fa-heart"></a></li>
+                     <li><a  (click) = "addcart()" class="fa fa-shopping-cart"></a></li>
+                  </ul>
+                  <span class="product-new-label">{{trendproduct.productlabel}}</span>
+               </div>
+               <div class="product-content">
+                  <h3 class="title"><a href="#"> {{trendproduct.productName}}</a></h3>
+                  <ul class="rating">
+                     <li class="fa fa-star"></li>
+                     <li class="fa fa-star"></li>
+                     <li class="fa fa-star"></li>
+                     <li class="fa fa-star"></li>
+                     <li class="fa fa-star"></li>
+                  </ul>
+                  <div class="price">{{trendproduct.productPrice}}
+                     <span>{{trendproduct.strickPrice}}</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<button (click)="closeFilterview()">open </button>

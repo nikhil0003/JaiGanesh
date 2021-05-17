@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators,AbstractControl } from '@angular/forms';
 import {Custompasswordvalidator} from '../../domainclass/custompasswordvalidator';
+import {LoginService} from '../../services/login.service';
+
 
 @Component({
   selector: 'app-register',
@@ -11,7 +13,9 @@ export class RegisterComponent implements OnInit {
 
   regForm : FormGroup;
   isSubmitted :  boolean = false;
-  constructor() { 
+  userAlreadyFound : boolean = false;
+  UserCreated : boolean = false;
+  constructor(private loginService : LoginService) { 
     
   }
 
@@ -41,6 +45,21 @@ get loginControls(){
 
 registerc(regisform  : FormGroup){
   this.isSubmitted = !this.isSubmitted;
+ 
+ if(regisform.valid) {
+  console.log(  regisform.value    );
+  this.loginService.register(regisform.controls['username'].value,regisform.controls['password'].value).subscribe(
+    (resp : any )=>{
+    
+     if(resp['username']==="userAlreadyFound"){
+       this.userAlreadyFound=resp['username'];
+     }else{
+       this.UserCreated= true;
+     }
+    }
+  )
+;
+ }
 
 }
 }

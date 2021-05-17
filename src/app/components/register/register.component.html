@@ -1,12 +1,13 @@
 <app-navbar></app-navbar>
 <div class="regis">
-    <form [formGroup]="regForm">
+    <div *ngIf="UserCreated">User Account is created Successfully </div> 
+
+    <form [formGroup]="regForm" *ngIf="!UserCreated" >
     <div class="container">
         <div class="row">
              <h1 style="color: white;"><i class="fa fa-lock" aria-hidden="true" style="color: white;"></i> Register</h1>
         
             </div><br /><br />
-            
                         <div class="input-group">
                             
                                     <div class="input-group-prepend">
@@ -16,6 +17,8 @@
                                     <input type="text" name="username" formControlName="username" class="form-control" placeholder="username or email"/>
                                 </div>
                                 <div *ngIf="(isSubmitted && loginControls.username.errors)" class="errorclass">*Please Enter Valid Email</div> 
+                                <div *ngIf="(isSubmitted && userAlreadyFound)" class="errorclass">*Email Id Already Exists</div> 
+
                                 <br />
                         <div class="input-group">
                                     <div class="input-group-prepend">
@@ -23,7 +26,11 @@
                                     </div>
                                         <input type="Password"  name="password" formControlName="password" class="form-control" placeholder="password"/>
                                 </div>
-                                 <div *ngIf="(isSubmitted && loginControls.password.errors)"  class="errorclass">*Please Enter Password</div> 
+                                 <div *ngIf="(isSubmitted && loginControls.password.errors?.required)"  class="errorclass">*Please Enter Password</div> 
+                                 <div *ngIf="(isSubmitted && loginControls.password.errors?.hasNumber)"  class="errorclass">*Password should contain one number</div> 
+                                 <div *ngIf="(isSubmitted && loginControls.password.errors?.hasCaptial)"  class="errorclass">*Password should contain one Captial letter</div> 
+                                 <div *ngIf="(isSubmitted && loginControls.password.errors?.hasSmall)"  class="errorclass">*Password should contain one Small letter</div>
+                                 <div *ngIf="(isSubmitted && loginControls.password.errors?.minlength)"  class="errorclass">*Password should min of 8 letter</div> 
                                 <br />
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -31,11 +38,27 @@
                                     </div>
                                         <input type="Password"  name="confirmpassword" formControlName="confirmpassword" class="form-control" placeholder="confirm password"/>
                                 </div>
-                                 <div *ngIf="(isSubmitted && loginControls.confirmpassword.errors)"  class="errorclass">*Please Enter Confirm  Password Again</div> 
+                                 <!-- <div *ngIf="(isSubmitted && loginControls.confirmpassword.errors)"  class="errorclass">*Please Enter Confirm  Password Again</div>  -->
+                                 <div *ngIf="(isSubmitted && loginControls.confirmpassword.errors?.required)"  class="errorclass">*Please Enter Confirm Password required  </div> 
+                                 <div *ngIf="(isSubmitted && loginControls.confirmpassword.errors?.hasNoMatch)"  class="errorclass">*Password is mismatched</div> 
+
                                 <br /><br />
             <button style="width: 250px;" type="submit" class="btn btn-info"  (click)= "registerc(regForm)">Register </button><br />
                    <br /> <div style="border:1px solid black;height:1px;width:350px;"></div><br />
-     
+                   <div class="footer">
+                     <a routerLink="/register" >Continue to Login</a>
+            <p>Forgot <a href="#">Password?</a></p>
+          </div>
+   
         </div>
     </form>
+
+    <br>
+
+<div *ngIf="UserCreated">
+ <div style="border:1px solid black;height:1px;width:350px;"></div><br />
+ <div class="footer">
+         <p style="color:white">Account has been Successfully created <a routerLink="/login" >
+            Continue to Login</a></p>
+    </div>
 </div>

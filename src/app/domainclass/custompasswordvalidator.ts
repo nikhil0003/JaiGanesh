@@ -22,11 +22,11 @@ export class Custompasswordvalidator {
                const  confirmpassword = control.get('confirmpassword')?.value;
               const password  = control.get('password')?.value;
                if(confirmpassword !==password){
-                control.get('confirmpassword')?.setErrors({'hasMatch': true});
-                return {'hasMatch': true};
+                control.get('confirmpassword')?.setErrors({'hasNoMatch': true});
+                return {'hasNoMatch': true};
                }
                else {
-                return {'hasMatch': false}; 
+                return null; 
                }  
           }
        }

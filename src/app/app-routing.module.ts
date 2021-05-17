@@ -5,6 +5,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductviewComponent } from './components/productview/productview.component';
 import {MyaccountComponent} from './components/myaccount/myaccount.component';
 import { RegisterComponent } from './components/register/register.component';
+import { Productview2Component } from './productview2/productview2.component';
+import { ShopcartComponent } from './components/shopcart/shopcart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderstatusComponent } from './components/orderstatus/orderstatus.component';
 
 const routes: Routes = [
     {    
@@ -23,6 +27,13 @@ const routes: Routes = [
   }
   ,{
     path : 'register', component: RegisterComponent
+  },{
+    path : 'productview2', component : Productview2Component
+  },{
+    path : 'shopcart', component : ShopcartComponent
+  },
+  {path : 'checkout',component : CheckoutComponent },{
+    path: 'order',component : OrderstatusComponent
   }
 ];
 

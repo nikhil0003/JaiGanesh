@@ -1,48 +1,45 @@
-import { Component, OnInit, Input} from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-import {trendproduct} from '../../domainclass/trendproduct';
- 
+import { Component, OnInit } from '@angular/core';
+import {trendproduct} from '../domainclass/trendproduct';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-productview2',
+  templateUrl: './productview2.component.html',
+  styleUrls: ['./productview2.component.css']
 })
-export class HomeComponent implements OnInit {
+export class Productview2Component implements OnInit {
+  trendproductList : trendproduct[] = new Array;
 
   constructor() { }
 
-  cartItems: number = 0;
-
-  trendproductList : trendproduct[] = new Array;
-  customOptions: OwlOptions = {
-    autoHeight: false,
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    autoplay:true,
-    autoplayTimeout:2500,
-    autoplayHoverPause:true,
-    responsive: {
-      0: {
-        items: 1
-      }
-    },
-    nav: true,
-   
-  }
   ngOnInit(): void {
-
+ 
     this.trendproductList.push( {productImg1:'http://localhost:8080/image/img-1.jpg',productImg2:'http://localhost:8080/image/img-2.jpg',productName: "Men's Blazer",productPrice:'₹1500.00',strickPrice:'₹2000.00',rating:'5',productlabel:'NEW'});
     this.trendproductList.push( {productImg1:'http://localhost:8080/image/img-3.jpg',productImg2:'http://localhost:8080/image/img-4.jpg',productName: "Women's White Shirt",productPrice:'₹1500.00',strickPrice:'₹2000.00',rating:'5',productlabel:'Hot'});
     this.trendproductList.push( {productImg1:'http://localhost:8080/image/img-5.jpg',productImg2:'http://localhost:8080/image/img-6.jpg',productName: "Women's Top",productPrice:'₹1500.00',strickPrice:'₹2000.00',rating:'5',productlabel:'Trending'});
     this.trendproductList.push( {productImg1:'http://localhost:8080/image/img-7.jpg',productImg2:'http://localhost:8080/image/img-8.jpg',productName: "Women's Black Top",productPrice:'₹1500.00',strickPrice:'₹2000.00',rating:'5',productlabel:'NEW'});
-  }
 
-  addcart(){
-   this.cartItems= this.cartItems+1;
+
+    $(document).ready(function() {
+      $("#sidebarCollapse").on("click", function() {
+        $("#sidebar").addClass("active");
+      });
+    
+      $("#sidebarCollapseX").on("click", function() {
+        $("#sidebar").removeClass("active");
+      });
+    
+      $("#sidebarCollapse").on("click", function() {
+        if ($("#sidebar").hasClass("active")) {
+          $(".overlay").addClass("visible");
+          console.log("it's working!");
+        }
+      });
+    
+      $("#sidebarCollapseX").on("click", function() {
+        $(".overlay").removeClass("visible");
+      });
+    });
   }
+    
+  
 }

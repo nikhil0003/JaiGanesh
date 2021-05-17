@@ -60,7 +60,7 @@
 
    @media screen and (max-width : 440px){
      .p{
-          margin-top: 0px;
+          margin-top: 60px;
      }
      .hero1{
       background: url("http://localhost:4200/assets/images/slide-01.jpg");
@@ -72,6 +72,15 @@
       background-size: 450px 500px ;
         background-repeat: no-repeat;
       }
+   }
+
+
+
+   .owl-prev {
+     position: absolute;
+     color :black;
+     margin-top: -50%;
+     background-color: black;
    }
 
 /*
@@ -111,6 +120,26 @@
     opacity: 0.7;
   }
   
+  @media(max-width:767px){
+    .category-item img {
+      width: 500px;
+      height: 250px;
+    }
+    .largeclass{
+      display: none;
+    }
+  }
+
+   
+  @media(min-width:767px){
+   
+    .mediumclass{
+      display: none;
+
+    }
+  }
+
+  
   /*
   *
   * ==========================================
@@ -119,72 +148,47 @@
   */
 
 
-  /*
-*
-* ==========================================
-* PRODUCT
-* ==========================================
-*
-*/
-.product img {
-    -webkit-filter: grayscale(40%);
-    filter: grayscale(40%);
-    transition: all 0.3s;
+/* trending products */
+
+/********************* Shopping Demo-7 **********************/
+.product-grid7{font-family:'Roboto Slab',serif;position:relative;z-index:1}
+.product-grid7 .product-image7{border:1px solid rgba(0,0,0,.1);overflow:hidden;perspective:1500px;position:relative;transition:all .3s ease 0s}
+.product-grid7 .product-image7 a{display:block}
+.product-grid7 .product-image7 img{width:100%;height:auto}
+.product-grid7 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid7 .pic-2{opacity:0;transform:rotateY(-90deg);position:absolute;top:0;left:0;transition:all .5s ease-out 0s}
+.product-grid7:hover .pic-2{opacity:1;transform:rotateY(0)}
+.product-grid7 .social{padding:0;margin:0;list-style:none;position:absolute;bottom:3px;left:-20%;z-index:1;transition:all .5s ease 0s}
+.product-grid7:hover .social{left:17px}
+.product-grid7 .social li a{color:#fff;background-color:#333;font-size:16px;line-height:40px;text-align:center;height:40px;width:40px;margin:15px 0;border-radius:50%;display:block;transition:all .5s ease-in-out}
+.product-grid7 .social li a:hover{color:#fff;background-color:#78e08f}
+.product-grid7 .product-new-label{color:#fff;background-color:#333;padding:5px 10px;border-radius:5px;display:block;position:absolute;top:10px;left:10px}
+.product-grid7 .product-content{text-align:center;padding:20px 0 0}
+.product-grid7 .title{font-size:15px;font-weight:600;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s}
+.product-grid7 .title a{color:#333}
+.product-grid7 .title a:hover{color:#78e08f}
+.product-grid7 .rating{color:#78e08f;font-size:12px;padding:0;margin:0 0 10px;list-style:none}
+.product-grid7 .price{color:#333;font-size:18px;font-family:Lora,serif;font-weight:600;margin-bottom:8px;text-align:center;transition:all .3s}
+.product-grid7 .price span{color:#999;font-size:14px;font-weight:600;text-decoration:line-through;margin-left:7px;display:inline-block}
+@media only screen and (max-width:990px){
+  .product-grid7{
+    margin-bottom:30px;
+
   }
-  
-  .product-overlay {
+  .container{
     width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 1rem 0;
-    opacity: 0;
-    transition: all 0.3s;
+  }
+
+}
+
+@media(max-width:600px ){
+  .product-grid7 .product-image7 img{width:100%;
+    height:350px
+  }
+
+  .rating{
+    left: 0px;
+    padding: 0%;
   }
   
-  .product-overlay ul li {
-    transition: all 0.3s;
-  }
-  
-  .product-overlay ul li:first-of-type {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-  
-  .product-overlay ul li:last-of-type {
-    -webkit-transform: translateX(10px);
-    transform: translateX(10px);
-    opacity: 0;
-  }
-  
-  .product:hover img {
-    opacity: 0.3;
-  }
-  
-  .product:hover .product-overlay {
-    opacity: 1;
-  }
-  
-  .product:hover .product-overlay li {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-  
-  .product .badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 999;
-  }
-  .reset-anchor {
-    text-decoration: none !important ;
-    color : black;
-  }
+}
